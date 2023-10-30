@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'home.css' %>
+
+
+<div class="container-view">
+    <h1>Início</h1>
+
+    <div class="container-boxes">
+        <div class="box">
+            <%= link_to "Pacientes", controller: 'pacientes', action: 'index' %>
+        </div>
+
+        <div class="box">
+             <span>
+                <%= link_to "Medicos", controller: 'medicos', action: 'index' %>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
