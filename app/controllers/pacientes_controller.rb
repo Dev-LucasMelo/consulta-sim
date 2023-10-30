@@ -13,6 +13,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/new
   def new
     @paciente = Paciente.new
+    @paciente.build_endereco
   end
 
   # GET /pacientes/1/edit
@@ -65,6 +66,6 @@ class PacientesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :email, :data_nascimento, :cpf)
+      params.require(:paciente).permit(:nome, :email, :data_nascimento, :cpf, {:endereco_attributes => [:id, :cep, :cidade, :bairro, :logradouro, :complemento]})
     end
 end
