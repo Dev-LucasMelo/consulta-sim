@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2023-10-30
+  hora: 2023-10-30 16:07:23
+  paciente: one
+
+two:
+  data: 2023-10-30
+  hora: 2023-10-30 16:07:23
+  paciente: two
