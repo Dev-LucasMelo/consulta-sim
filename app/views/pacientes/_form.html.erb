@@ -1,4 +1,6 @@
-<%= form_with(model: paciente) do |form| %>
+<%= stylesheet_link_tag 'form_generico.css' %>
+
+<%= form_with(model: paciente) do |form|  %>
   <% if paciente.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
@@ -11,54 +13,57 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :data_nascimento, style: "display: block" %>
-    <%= form.date_field :data_nascimento %>
-  </div>
-
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
-    <%= form.text_field :cpf %>
-  </div>
-
-  <%= form.fields_for :endereco do |endereco_form| %>
-    <div class="field">
-      <%= endereco_form.label :cep, style: "display: block" %>
-      <%= endereco_form.text_field :cep %>
+  <div class="container_form">
+    <div>
+      <%= form.label :nome, style: "display: block" %>
+      <%= form.text_field :nome, class: "input" %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :cidade, style: "display: block" %>
-      <%= endereco_form.text_field :cidade %>
+    <div>
+      <%= form.label :email, style: "display: block" %>
+      <%= form.text_field :email, class: "input" %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :bairro, style: "display: block" %>
-      <%= endereco_form.text_field :bairro %>
+    <div>
+      <%= form.label :data_nascimento, style: "display: block" %>
+      <%= form.date_field :data_nascimento, class: "input" %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :logradouro, style: "display: block" %>
-      <%= endereco_form.text_field :logradouro %>
+    <div>
+      <%= form.label :cpf, style: "display: block" %>
+      <%= form.text_field :cpf, class: "input" %>
     </div>
 
-    <div class="field">
-      <%= endereco_form.label :complemento, style: "display: block" %>
-      <%= endereco_form.text_field :complemento %>
-    </div>
-  <% end %>
+    <%= form.fields_for :endereco do |endereco_form| %>
+      <div class="field">
+        <%= endereco_form.label :cep, style: "display: block" %>
+        <%= endereco_form.text_field :cep, class: "input" %>
+      </div>
 
-  <div>
-    <%= form.submit %>
+      <div class="field">
+        <%= endereco_form.label :cidade, style: "display: block" %>
+        <%= endereco_form.text_field :cidade, class: "input" %>
+      </div>
+
+      <div class="field">
+        <%= endereco_form.label :bairro, style: "display: block" %>
+        <%= endereco_form.text_field :bairro, class: "input" %>
+      </div>
+
+      <div class="field">
+        <%= endereco_form.label :logradouro, style: "display: block" %>
+        <%= endereco_form.text_field :logradouro, class: "input" %>
+      </div>
+
+      <div class="field">
+        <%= endereco_form.label :complemento, style: "display: block" %>
+        <%= endereco_form.text_field :complemento, class: "input" %>
+      </div>
+    <% end %>
+
+    <div class="container_button">
+      <%= form.submit "Enviar", class: "button" %>
+    </div>
   </div>
+
 <% end %>
