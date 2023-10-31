@@ -22,11 +22,13 @@
   </div>
 
   <div>
-    
-
     <%= form.label :paciente_id, style: "display: block" %>
     <%= form.collection_select(:paciente_id, @paciente, :id, :nome, prompt: "Selecione um paciente",) %>
-    
+  </div>
+
+   <div>
+    <%= form.label :medico_id, style: "display: block" %>
+    <%= form.collection_select(:medico_id, @medico, :id, :nome, prompt: "Selecione o medico",) %>
   </div>
 
   <div>
