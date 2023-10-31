@@ -1,45 +1,36 @@
-<div id="<%= dom_id paciente %>">
+<%= stylesheet_link_tag 'listas.css' %>
+
+<div class="container-data" id="<%= dom_id paciente %>">
   <p>
-    <strong>Nome:</strong>
+    <strong>NOME:</strong>
     <%= paciente.nome %>
   </p>
 
   <p>
-    <strong>Email:</strong>
+    <strong>E-MAIL:</strong>
     <%= paciente.email %>
   </p>
 
   <p>
-    <strong>Data nascimento:</strong>
+    <strong>DATA DE NASCIMENTO:</strong>
     <%= paciente.data_nascimento %>
   </p>
-
+  <h3>DADOS DE ENDEREÇO </h3>
   <p>
-    <strong>Cep:</strong>
+    <strong>CEP</strong>
     <%= paciente.endereco.cep %>
-  </p>
-
-  <p>
-    <strong>cidade:</strong>
+    
+    <strong>CIDADE:</strong>
     <%= paciente.endereco.cidade %>
-  </p>
 
-  <p>
-    <strong>bairro:</strong>
+    <strong>BAIRRO:</strong>
     <%= paciente.endereco.bairro %>
   </p>
-
   <p>
-    <strong>bairro:</strong>
+    <strong>LOGRADOURO:</strong>
     <%= paciente.endereco.logradouro %>
-  </p>
 
-  <p>
-    <strong>complemento:</strong>
+    <strong>COMPLEMENTO:</strong>
     <%= paciente.endereco.complemento %>
   </p>
-
-
-
-
 </div>

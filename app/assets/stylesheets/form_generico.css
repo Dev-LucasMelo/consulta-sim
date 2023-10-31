@@ -6,14 +6,12 @@
     -webkit-box-shadow: 12px 13px 16px 0px rgba(0,0,0,0.68);
     -moz-box-shadow: 12px 13px 16px 0px rgba(0,0,0,0.68);
 }
-
 textarea:focus, .input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 1px solid rgba(0, 0, 0, 0.568);
     outline: 0;
 } 
-
-.input{
+.input, select{
     font-size: 12px;
     width: 90%;
     height: 20px;
@@ -21,7 +19,6 @@ textarea:focus, .input:focus, select:focus {
     margin: 0 0 5px 0;
     border: 1px solid rgba(0, 0, 0, 0.568);
 }
-
 .button {
     margin: auto;
     color: white;

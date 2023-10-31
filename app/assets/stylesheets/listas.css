@@ -1,0 +1,8 @@
+.container-data {
+    width: 280px;
+    border: 1px solid rgba(0, 0, 0, 0.298);
+    padding: 10px 0 10px 15px;
+    box-shadow: 12px 13px 16px 0px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 12px 13px 16px 0px rgba(0,0,0,0.68);
+    -moz-box-shadow: 12px 13px 16px 0px rgba(0,0,0,0.68);
+}
