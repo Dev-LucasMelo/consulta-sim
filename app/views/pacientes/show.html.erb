@@ -6,5 +6,7 @@
   <%= link_to "Edit this paciente", edit_paciente_path(@paciente) %> |
   <%= link_to "Back to pacientes", pacientes_path %>
 
+  <%= link_to "Agendar consulta", new_consultum_path(@consulta) %>
+
   <%= button_to "Destroy this paciente", @paciente, method: :delete %>
 </div>

@@ -13,10 +13,12 @@ class ConsultaController < ApplicationController
   # GET /consulta/new
   def new
     @consultum = Consultum.new
+    @paciente = Paciente.all
   end
 
   # GET /consulta/1/edit
   def edit
+    @paciente = Paciente.all
   end
 
   # POST /consulta or /consulta.json
