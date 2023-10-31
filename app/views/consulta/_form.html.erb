@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'form_generico.css' %>
+
 <%= form_with(model: consultum) do |form| %>
   <% if consultum.errors.any? %>
     <div style="color: red">
@@ -11,27 +13,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :data, style: "display: block" %>
-    <%= form.date_field :data %>
-  </div>
+  <div class="container_form">
+    <div>
+      <%= form.label :data, style: "display: block" %>
+      <%= form.date_field :data, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :hora, style: "display: block" %>
-    <%= form.time_field :hora %>
-  </div>
+    <div>
+      <%= form.label :hora, style: "display: block" %>
+      <%= form.time_field :hora, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :paciente_id, style: "display: block" %>
-    <%= form.collection_select(:paciente_id, @paciente, :id, :nome, prompt: "Selecione um paciente",) %>
-  </div>
+    <div>
+      <%= form.label :paciente_id, style: "display: block" %>
+      <%= form.collection_select(:paciente_id, @paciente, :id, :nome, prompt: "Selecione um paciente",) %>
+    </div>
 
-   <div>
-    <%= form.label :medico_id, style: "display: block" %>
-    <%= form.collection_select(:medico_id, @medico, :id, :nome, prompt: "Selecione o medico",) %>
-  </div>
+    <div>
+      <%= form.label :medico_id, style: "display: block" %>
+      <%= form.collection_select(:medico_id, @medico, :id, :nome, prompt: "Selecione o medico",) %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="container_button">
+      <%= form.submit "Enviar", class: "button" %>
+    </div>
   </div>
 <% end %>

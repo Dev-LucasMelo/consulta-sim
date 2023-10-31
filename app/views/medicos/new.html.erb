@@ -1,9 +1,13 @@
-<h1>New medico</h1>
+<%= stylesheet_link_tag 'application.css' %>
 
-<%= render "form", medico: @medico %>
+<section class="container_view_form">
+  <h1>Cadastrar Medico</h1>
 
-<br>
+  <%= render "form", medico: @medico %>
 
-<div>
-  <%= link_to "Back to medicos", medicos_path %>
-</div>
+  <br>
+
+  <div>
+    <%= link_to "Back to medicos", medicos_path %>
+  </div>
+</section>

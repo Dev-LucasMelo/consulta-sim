@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'form_generico.css' %>
+
 <%= form_with(model: medico) do |form| %>
   <% if medico.errors.any? %>
     <div style="color: red">
@@ -11,32 +13,34 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_area :nome %>
-  </div>
+  <div class="container_form">
+    <div>
+      <%= form.label :nome, style: "display: block" %>
+      <%= form.text_area :nome, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :cpf, style: "display: block" %>
-    <%= form.text_field :cpf %>
-  </div>
+    <div>
+      <%= form.label :cpf, style: "display: block" %>
+      <%= form.text_field :cpf, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_area :email %>
-  </div>
+    <div>
+      <%= form.label :email, style: "display: block" %>
+      <%= form.text_area :email, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :especialidade, style: "display: block" %>
-    <%= form.text_area :especialidade %>
-  </div>
+    <div>
+      <%= form.label :especialidade, style: "display: block" %>
+      <%= form.text_area :especialidade, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.label :crm, style: "display: block" %>
-    <%= form.text_field :crm %>
-  </div>
+    <div>
+      <%= form.label :crm, style: "display: block" %>
+      <%= form.text_field :crm, class: "input" %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="container_button">
+      <%= form.submit "Enviar", class: "button" %>
+    </div>
   </div>
 <% end %>
