@@ -1,6 +1,8 @@
 class Medico < ApplicationRecord
     #relacionamentos
     has_many :consulta, dependent: :destroy
+    has_many :pacientes, through: :consultums
+    
 
     #validates
     validates :nome , presence: true, length: { minimum: 10 , message: "nao pode ter menos que 10 digitos"} , format: { without: /\d/, message: "Nome não pode conter números" }

@@ -2,6 +2,7 @@ class Paciente < ApplicationRecord
     #relacionamentos
     has_one :endereco, dependent: :destroy
     has_many :consulta, dependent: :destroy
+    has_many :medicos, through: :consultums
     accepts_nested_attributes_for :endereco
 
     #validates

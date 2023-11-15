@@ -4,7 +4,7 @@ class CreateConsulta < ActiveRecord::Migration[7.0]
       t.date :data
       t.time :hora
       t.references :paciente, null: false, foreign_key: true
-      t.references :medico, null: false, foreign_key: true
+      t.references :medico, foreign_key: true
 
 
       

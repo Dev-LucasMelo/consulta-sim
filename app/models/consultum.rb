@@ -7,7 +7,6 @@ class Consultum < ApplicationRecord
   validates :data, presence: true
   validates :hora, presence: true
   validates :paciente_id, presence: true
-  validates :medico_id, presence: true
-
+  validates :medico_id
 
 end
